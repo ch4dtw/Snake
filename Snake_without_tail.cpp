@@ -48,7 +48,7 @@ public:
 		body[1].setPoint(1, 1);
 		tail.setPoint(1, 1);
 
-		//å¨©î†¯
+		//Ãä®Ø
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {
 				if (i == 0 || i == 9 || j == 0 || j == 9)area[i][j] = '#';
@@ -80,12 +80,9 @@ public:
 
 	}
 	void run (int step) {
-		tail.setPoint(body[Length - 2].getX(),body[Length - 2].getY());
-
-		int tempX = tail.getX();
-		int tempY = tail.getY();
-
-		area[tail.getX()][tail.getY()] = ' ';
+		int tempX = body[Length - 2].getX();
+		int tempY = body[Length - 2].getY();
+		area[body[Length - 2].getX()][body[Length - 2].getY()] = ' ';
 
 		for (int i = Length-1; i > 0; i--)
 			body[i].setPoint(body[i - 1].getX(), body[i - 1].getY());
@@ -158,7 +155,7 @@ int  main() {
 	while (1) {
 
 		sg.printArea();
-		cout << "ãƒ˜çŽ¡ã è®¡:";
+		cout << "¥Ø«e¤À¼Æ:";
 		sg.Printscore();
 		cout << endl ;
 		cout << "L:left U:up R:right D:down" << endl ;
